@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Pet-calc/css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+<div class="calc" id="calculator">
+    <div class="title">CASIO</div>
+    <div class="output" id="display">
+        <div id="previous-operand"></div>
+        <div id="current-operand"></div>
+        <pre class="upper"></pre>
+        <pre class="lower"></pre>
+    </div>
+
+    <div class="input">
+        <button type="button" class="tech" id="clear">C</button>
+        <button type="button" class="tech" id="delete">DEL</button>
+        <button type="button" class="tech" id="percent"> </button>
+        <button type="button" class="operator" id="divide">÷</button>
+
+        <button type="button" class="number" id="number-7">7</button>
+        <button type="button" class="number" id="number-8">8</button>
+        <button type="button" class="number" id="number-9">9</button>
+        <button type="button" class="operator" id="multiply">*</button>
+
+        <button type="button" class="number" id="number-6">6</button>
+        <button type="button" class="number" id="number-5">5</button>
+        <button type="button" class="number" id="number-4">4</button>
+        <button type="button" class="operator" id="addition">+</button>
+
+        <button type="button" class="number" id="number-3">3</button>
+        <button type="button" class="number" id="number-2">2</button>
+        <button type="button" class="number" id="number-1">1</button>
+        <button type="button" class="operator" id="subtraction">-</button>
+
+        <button type="button" class="number" id="number-0">0</button>
+        <button type="button" class="number" id="dot">.</button>
+        <button type="button" class="goal" id="equals">=</button>
+    </div>
+</div>
+
+<div class="question">
+        <p class="quest">1. Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.</p>
+        <pre class="block__code">
+            <code class="answer">
+let chislo = 4
+if (Math.sign(chislo) == 1) {
+console.log('Число положительное')}              
+else {
+console.log('Число отрицательное')}
+            </code>
+        </pre>
+        <p class="quest">2. Дана строка. Выведите в консоль длину этой строки.</p>
+        <pre class="block__code">
+            <code class="answer">
+let stroka = 'Улыбок тебе дед Макар'
+console.log(stroka.length)
+            </code>
+        </pre>
+        <p class="quest">3. Дана строка. Выведите в консоль последний символ строки.</p>
+        <pre class="block__code">
+            <code class="answer">
+let stroka = 'Улыбок тебе дед Макар'
+console.log(stroka.slice(-1))
+            </code>
+        </pre>
+        <p class="quest">4. Дано число. Проверьте, четное оно или нет.</p>
+        <pre class="block__code">
+            <code class="answer">
+let chislo = 8
+if (chislo % 2 === 0) {
+    console.log('Четное')
+}
+else {
+    console.log('Нечетное')
+}
+            </code>
+        </pre>
+        <p class="quest">5. Даны два слова. Проверьте, что первые буквы этих слов совпадают.</p>
+        <pre class="block__code">
+            <code class="answer">
+let stroka = ['Чи','Да']
+if (stroka[0].slice(0, 1) == stroka[1].slice(0, 1)) {
+    console.log('Первые буквы совпадают') 
+}
+else {
+    console.log('Первые буквы не совпадают')
+}
+            </code>
+        </pre>
+        <p class="quest">6. Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.</p>
+        <pre class="block__code">
+            <code class="answer">
+let slovo = 'Слышь'
+if (slovo.slice(-1) != 'ь') {
+    console.log(slovo.slice(-1))
+}
+else {
+    console.log(slovo.slice(-2, -1))
+}
+            </code>
+        </pre>
+        <p class="quest">7. Дано число. Выведите в консоль первую цифру этого числа.</p>
+        <pre class="block__code">
+            <code class="answer">
+let chislo = 85
+let str = chislo.toString()
+console.log(str[0])
+            </code>
+        </pre>
+    </pre>
+    <p class="quest">8. Дано число. Выведите в консоль последнюю цифру этого числа.</p>
+    <pre class="block__code">
+        <code class="answer">
+let chislo = 85459946
+let str = chislo.toString().slice(-1)
+console.log(str[0])
+        </code>
+    </pre>
+    <p class="quest">9. Дано число. Выведите в консоль сумму первой и последней цифры этого числа.</p>
+    <pre class="block__code">
+        <code class="answer">
+let chislo = 85459946
+let str = chislo.toString().slice(0,1)
+let str1 = chislo.toString().slice(-1)
+let p1 = Number(str)
+let p2 = Number(str1)
+let sum = p1 + p2
+console.log(sum)
+        </code>
+    </pre>
+    <p class="quest">10. Дано число. Выведите количество цифр в этом числе.</p>
+    <pre class="block__code">
+        <code class="answer">
+let chislo = 85459946
+let str = chislo.toString().length
+console.log(str)
+        </code>
+    </pre>
+    <p class="quest">11. Даны два числа. Проверьте, что первые цифры этих чисел совпадают.</p>
+    <pre class="block__code">
+        <code class="answer">
+let chislo = 210
+let chislo1 = 130
+let str = chislo.toString().slice(0,1)
+let str1 = chislo1.toString().slice(0,1)
+if (str == str1) {
+    console.log('Числа совпадают, заебись')
+}
+    else {
+    console.log('Числа не совпадают, лох')
+    }
+        </code>
+    </pre>
+    <p class="quest">12. Дана строка. Если в этой строке более одного символа, выведите в консоль предпоследний символ этой строки.</p>
+    <pre class="block__code">
+        <code class="answer">
+let stroka = 'Строка с символами'
+if (stroka.length > 1) {
+    console.log('Предпоследний символ: ' +stroka.slice(-2, -1))
+}
+else {
+    console.log('Лох')
+}
+        </code>
+    </pre>
+    <p class="quest">13. Даны два целых числа. Проверьте, что первое число без остатка делится на второе.</p>
+    <pre class="block__code">
+        <code class="answer">
+let chislo = 14
+let chislo1 = 12
+if (chislo % chislo1 == 0) {
+    console.log('Заебись')
+}
+    else {
+    console.log('Лох')
+    }
+        </code>
+    </pre>
+    <p class="quest">14. Выведите в консоль все целые числа от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+for (i = 1; i <= 100; i++) {
+    console.log(i);
+}
+        </code>
+    </pre>
+    <p class="quest">15. Выведите в консоль все целые числа от -100 до 0.</p>
+    <pre class="block__code">
+        <code class="answer">
+for (i = -100; i <= 0; i++) {
+    console.log(i);
+}
+        </code>
+    </pre>
+    <p class="quest">16. Выведите в консоль все целые числа от 100 до 1.</p>
+    <pre class="block__code">
+        <code class="answer">
+for (i = 100; i >= 0; i--) {
+    console.log(i);
+}
+        </code>
+    </pre>
+    <p class="quest">17. Выведите в консоль все четные числа из промежутка от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+for (i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+    console.log(i); }
+}
+        </code>
+    </pre>
+    <p class="quest">18. Выведите в консоль все числа кратные трем в промежутке от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+for (i = 1; i <= 100; i++) {
+    if (i % 3 == 0) {
+    console.log(i); }
+}
+        </code>
+    </pre>
+    <p class="quest">19. Найдите сумму всех целых чисел от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+let sum = 0
+for (i = 1; i <= 100; i++) {
+sum = sum + i
+}
+console.log(sum)
+        </code>
+    </pre>
+    <p class="quest">20. Найдите сумму всех целых четных чисел в промежутке от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+let sum = 0
+for (i = 1; i <= 100; i++) {
+if (i % 2 == 0){
+sum = sum + i}
+}
+console.log(sum)
+        </code>
+    </pre>
+    <p class="quest">21. Найдите сумму всех целых нечетных чисел в промежутке от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+let sum = 0
+for (i = 1; i <= 100; i++) {
+if (i % 2 == 1){
+sum = sum + i}
+}
+console.log(sum)
+        </code>
+    </pre>
+    <p class="quest">22. Даны два целых числа. Найдите остаток от деления первого числа на второе.</p>
+    <pre class="block__code">
+        <code class="answer">
+let one = 124
+let two = 87
+console.log(one % two)
+        </code>
+    </pre>
+    <p class="quest">23. Дана некоторая строка. Переберите и выведите в консоль по очереди все символы с конца строки.</p>
+    <pre class="block__code">
+        <code class="answer">
+let str = 'Добрый вечер';
+for (let i = str.length - 1; i >= 0; i--) {
+    console.log(str.charAt(i));
+}
+        </code>
+    </pre>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>
