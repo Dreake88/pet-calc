@@ -42,6 +42,31 @@ button.addEventListener("click", function() {
 });
 });
 
+clearButton.addEventListener("click", function() {
+    upperValue = '';
+    lowerValue = '';
+    displayValue();
+})
+
+deleteButton.addEventListener("click", function() {
+    upperValue = upperValue.slice(0, -1);
+    displayValue();
+})     
+
+percentButton.addEventListener("click", function() {
+const lowerNumber = parseFloat(lowerValue);
+
+if (isNaN(lowerNumber)) {
+    lowerValue = 'Error: Invalid input';
+    displayValue();
+    return;
+}
+
+const result = (parseFloat(upperValue) * lowerNumber) / 100;
+
+lowerValue = result.toString();
+displayValue();
+});
 
 function calculate(goal) {
 const operators = ['*', '/', '+', '-'];
