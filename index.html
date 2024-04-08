@@ -272,6 +272,110 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
         </code>
     </pre>
+    <p class="quest">24. Дан массив с числами. Найдите сумму квадратов элементов этого массива.</p>
+    <pre class="block__code">
+        <code class="answer">
+let arr = [8,2,4,3,1,2,5]
+let sum = 0
+for (let i = 0; i < arr.length; i++) {
+    let qua = arr[i] * arr[i];
+    sum += qua
+}
+console.log(sum)
+        </code>
+    </pre>
+    <p class="quest">25. Дан массив с числами. Найдите сумму положительных элементов этого массива.</p>
+    <pre class="block__code">
+        <code class="answer">
+let arr = [8,2,-4,3]
+let res = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+        res += arr[i]
+    }
+}
+console.log(res)
+        </code>
+    </pre>
+    <p class="quest">26. Дан массив с числами. Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти.</p>
+    <pre class="block__code">
+        <code class="answer">
+let arr = [8,2,-4,11]
+let res = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0 && arr[i] < 10) {
+        res += arr[i]
+    }
+}
+console.log(res)
+        </code>
+    </pre>
+    <p class="quest">27. Получите массив букв этой строки: 'abcde'</p>
+    <pre class="block__code">
+        <code class="answer">
+let str = 'abcde'
+let arr = str.split("")
+console.log(arr)
+        </code>
+    </pre>
+    <p class="quest">28. Получите массив цифр этого числа: '12345'</p>
+    <pre class="block__code">
+        <code class="answer">
+let num = 12345
+let str = num.toString()
+let arr = str.split("")
+console.log(arr)
+        </code>
+    </pre>
+    <p class="quest">29. Переверните число: '12345'</p>
+    <pre class="block__code">
+        <code class="answer">
+let num = 12345
+let str = num.toString()
+let rev = str.split("").reverse().join("")
+console.log(rev)
+        </code>
+    </pre>
+    <p class="quest">30. Найдите сумму цифр у числа: '12345'</p>
+    <pre class="block__code">
+        <code class="answer">
+let num = 12345
+let str = num.toString().split('')
+let sum = 0
+for (i = 0; i < arr.length; i++) {
+sum += Number(str[i])
+}
+console.log(sum)   
+        </code>
+    </pre>
+    <p class="quest">31. Заполните массив целыми числами от 1 до 10.</p>
+    <pre class="block__code">
+        <code class="answer">
+let num = []
+for (i = 0; i <= 10; i++) {
+ num.push(i)
+}
+console.log(num)
+        </code>
+    </pre>
+    <p class="quest">32. Заполните массив четными числами из промежутка от 1 до 100.</p>
+    <pre class="block__code">
+        <code class="answer">
+let num = []
+for (i= 1; i <= 100; i++) {
+    if(i % 2 == 0) {
+        num.push(i)
+    }
+}
+console.log(num)
+        </code>
+    </pre>
+    <p class="quest">32. Дан массив с дробями: [1.456, 2.125, 3.32, 4.1, 5.34]. Округлите эти дроби до одного знака в дробной части.</p>
+    <pre class="block__code">
+        <code class="answer">
+
+        </code>
+    </pre>
 </div>
 <script src="./js/main.js"></script>
 </body>
